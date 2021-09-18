@@ -1,1 +1,0 @@
-{"version":1,"defects":{"Test\\Unit\\ShortnerTest::test_url":4,"Test\\Unit\\LongUrlTest::test_code":4},"times":{"Test\\Unit\\ShortnerTest::test_url":0.018,"Test\\Unit\\LongUrlTest::test_code":0.015}}
