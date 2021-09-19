@@ -11,11 +11,6 @@ class Shortner
     public $filename = "list.json";
 
 
-    public function init()
-    {
-        fopen($this->filename, "w+");
-    }
-
     public function urlToShortCode(string $url)
     {
         if ($this->validateUrlFormat($url) == false) {
@@ -26,7 +21,6 @@ class Shortner
             return $this->createShortCode($url);
 
         }
-
 
     }
 
@@ -49,7 +43,7 @@ class Shortner
     {
         $fj = json_decode(file_get_contents("list.json"), true);
         if (array_key_exists('url', $fj) && $fj['url'] === $url) {
-          throw new exception ('URL already exists');
+            throw new exception ('URL already exists');
 
         }
 
@@ -84,8 +78,6 @@ class Shortner
         $randString = str_shuffle($randString);
         return $randString;
     }
-
-
 
 
 }
